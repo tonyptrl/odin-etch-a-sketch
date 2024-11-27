@@ -21,11 +21,13 @@ body {
   height: 48px;
   margin: auto;
   border: solid;
+  border-color: #C0C0C0;
   border-width: 1px;
 }
 
 .hovering {
   background-color: black;
+  opacity: 0.1;
 }
 
 button {

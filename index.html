@@ -30,8 +30,14 @@
         a++;
 
         div.addEventListener("mouseenter", () => {
-        div.classList.add("hovering");
-      });
+          if (!div.classList.contains("hovering")){
+            div.classList.add("hovering");
+            div.style.borderColor = "#000000";
+            div.style.opacity = 0.1;
+          } else if (div.classList.contains("hovering") && div.style.opacity !== 1) {
+              div.style.opacity = parseFloat(div.style.opacity) + 0.1;
+          };
+        });
       };
     };
 
