@@ -42,14 +42,17 @@
         div.remove();
         b++;
       };
-      userInput = prompt("How many squares per side?");
-      squareNbr = userInput * userInput;
-      squareSize = (800 / userInput) - 2;
-      a = 0;
-      b = 0;
-      generateSquares();
+      userInput = prompt("How many squares per side? (100 maximum)");
+        while (userInput > 100) {
+          alert("Please enter a number less than or equal to 100");
+          userInput = prompt("How many squares per side? (100 maximum)");
+        }
+        squareNbr = userInput * userInput;
+        squareSize = (800 / userInput) - 2;
+        a = 0;
+        b = 0;
+        generateSquares();
     });
-
 
     generateSquares();
   </script>
