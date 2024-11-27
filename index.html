@@ -7,21 +7,45 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <button>start a new grid</button>
   <div id="container"></div>
   
   <script>
     const container = document.getElementById("container");
+    const btn = document.querySelector("button");
+    let squareNbr = 256;
+    let a = 0;
+    let b = 0;
 
-    for (let i = 0 ; i < 256 ; i++) {
-      const div = document.createElement("div");
-      div.classList.add("square");
-      container.appendChild(div);
 
-      div.addEventListener('mouseenter', () => {
+    function generateSquares() {
+      while (a < squareNbr) {
+        const div = document.createElement("div");
+        div.classList.add("square");
+        container.appendChild(div);
+        a++;
+
+        div.addEventListener("mouseenter", () => {
         div.classList.add("hovering");
       });
+      };
     };
-   
+
+
+    btn.addEventListener('click', () => {
+      while (b < squareNbr) {
+        const div = container.querySelector("div");
+        div.remove();
+        b++;
+      };
+      squareNbr = prompt("How many squares?");
+      a = 0;
+      b = 0;
+      generateSquares();
+    });
+
+
+    generateSquares();
   </script>
 </body>
 </html>

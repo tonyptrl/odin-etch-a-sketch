@@ -1,9 +1,20 @@
+body {
+  background-color: lightblue;
+}
+
 #container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   width: 800px;
   height: 800px;
+  background-color: #C0C0C0;
+  border: solid;
+  border-width: 20px;
+  border-radius: 10px;
+  border-color: red;
+  margin: auto;
+  box-shadow: 0px 5px 15px 5px #000000;
 }
 
 .square {
@@ -11,8 +22,23 @@
   height: 46px;
   border: solid;
   border-width: 1px;
+  margin: auto;
 }
 
 .hovering {
-  background-color: blue;
+  background-color: black;
+}
+
+button {
+  display: flex;
+  margin: auto;
+  margin-bottom: 10px;
+  padding: 8px 13px;
+  font-size: 18px;
+  color: white;
+  background-color: lightgreen;
+  cursor: pointer;
+  border: solid;
+  border-width: 1px;
+  border-color: white;
 }
